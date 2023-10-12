@@ -1,20 +1,16 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios';
+import { getCommits } from '../services/Octokit'
 
 onMounted(() => {
   getData()
-  console.log("hola");
 })
 
-
-
-const data = ref();
+const commits = ref();
 
 const getData = async () => {
-  await axios.get('https://api.github.com/repos/xCHZx/ftf-tht-frontend/commits/7283418fb0ef7d61f6c3a95896fd8f853f506b3e').then(res => {
-    data.value = res.data;
-  })
+  commits.value = await getCommits()
 }
 
 </script>
@@ -28,8 +24,8 @@ const getData = async () => {
 
     <div class="mt-4 text-subtitle-2">With slots</div>
 
-    <div v-for="item in data">
-      <h1>Prueba for</h1>
+    <div v-for="commit in commits">
+      <h1>{{ commit.commit.message }}</h1>
     </div>
 
     <v-card width="400">
