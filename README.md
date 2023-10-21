@@ -1,46 +1,41 @@
-# ftf-tht-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+# GitLooker
 
-## Recommended IDE Setup
+Meet **GitLooker**, the project where you can see the commits of this own project.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+This project is intended to run in a local environment.
 
-## Type Support for `.vue` Imports in TS
+# Demo
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+You can interact with a live demo in this link:
+[GitLooker Demo](https://gitlooker.netlify.app/)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+# Installation
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
-## Customize configuration
+To install this project **with npm** you need to download the repository through a git clone:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```bash
+git clone https://github.com/xCHZx/ftf-tht-frontend.git
+```
+Once the project is downloaded, open your terminal in the directory of the folder and run the following command to install the dependencies:
 
-## Project Setup
-
-```sh
+```bash
 npm install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+This project needs a Personal Access Token from GitHub to be able to connect to the API.
+Once you have the token, you need to place it in the .env file inside the project.
+```bash
+VITE_OCTOKIT_TOKEN = your_token_goes_here
 ```
 
-### Type-Check, Compile and Minify for Production
 
-```sh
-npm run build
+To run the app, start the server running the following command:
+
+```bash
+npm run start
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Notes
 
-```sh
-npm run test:unit
-```
+This project is for testing purposes. For more information contact the repository owner.
